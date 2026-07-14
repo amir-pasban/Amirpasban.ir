@@ -3,11 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 } */
+
+:root{
+    --font-color:#ffff;
+    --special-color: cadetblue;
+}
+
 /* wallpaper */
 body{
     min-height: 96vh;
     background-image: url(/assets/photo/wallpaper-2.jpg);
     background-size: cover;
+    font-family: 'Nunito',sans-serif;
 }
 
 /* container */
@@ -15,7 +22,8 @@ body{
 .container{
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: rgba(16, 21, 21, 0.881);
     backdrop-filter: blur(4px);
 
 }
@@ -44,11 +52,77 @@ nav{
     height: 100%;
     /* background-color: aliceblue; */
 }
+#container-header-items>li>a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--font-color);
+}
 
 
 /* ------------main------------- */
+main{
+    width: 100%;
+    height: max-content;
+    /* background-color: cadetblue; */
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* home page */
+#home-page{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.descripttion-home{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* text descripttion */
+.text-descripttion-home>*{
+    color: var(--font-color);
+}
+.text-descripttion-home>h1{
+    font-size: 2.375rem;
+    color: var(--special-color);
+}
+.text-descripttion-home>h3>span{
+    color: var(--special-color);
+    font-size: 1.4375rem;
+}
+.text-descripttion-home>p{
+    line-height: 25px;
+    font-weight: 500;
+}
+
+/* link descripttion in home */
+.links-descripttion-home{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+}
+.links-descripttion-home>a>i{
+    font-size: 1.7rem;
+    color: var(--special-color);
+}
+
+
+.image-me-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(95, 158, 160, 0.322);
+    border-radius: 100%;
+    padding-right: 15px;
+}
 .image-me-home>a>img{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
 }
