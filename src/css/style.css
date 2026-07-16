@@ -11,9 +11,12 @@
 
 /* wallpaper */
 body{
-    min-height: 96vh;
-    background-image: url(/assets/photo/wallpaper-2.jpg);
+    min-height: 100dvh;
+    background-image: url('/assets/photo/wallpaper-2.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Nunito',sans-serif;
 }
 
