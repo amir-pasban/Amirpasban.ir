@@ -41,6 +41,10 @@ body {
 .container {
     width: 100%;
     min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: rgba(16, 21, 21, 0.95);
     z-index: -10;
 }
@@ -192,6 +196,7 @@ nav {
     justify-content: right;
 }
 .header-right-items>button{
+    cursor: pointer;
     width: 60%;
     height: 35px;
     font-size: .9rem;
@@ -203,19 +208,18 @@ nav {
 
 /* ------------main------------- */
 main {
-    width: 100%;
+    width: 80%;
     height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 170px;
-
+    row-gap: 120px;
 }
 
 /* --------------home page------------- */
 #home-page {
-    width: 80%;
+    width: 100%;
     height: max-content;
     display: flex;
     align-items: center;
@@ -327,22 +331,22 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px;
-    height: 500px;
+    width: 50%;
+    height: 100%;
     position: relative;
     display: flex;
     align-items: end;
     justify-content: center;
     z-index: auto;
-    /* background-color: aqua; */
+    margin-top: 80px;
 }
 
 .image-me-home::before {
     content: "";
     position: absolute;
     background-color: rgba(95, 158, 160, 0.64);
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 100%;
     border-radius: 50%;
     border: 5px solid var(--special-color-2);
     z-index: -1;
@@ -354,16 +358,42 @@ main {
     justify-content: center;
 }
 .image-me-home>a>img {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     opacity: 1;
     margin-right: 8px;
 }
+/* --------services-page----------- */
+#services-page{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* title services */
+.services-title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 17px;
+}
+.services-title>h2{
+    color: var(--special-color);
+}
+.services-title>p{
+    font-size: 1rem;
+    color: var(--font-color);
+}
+
 
 
 /* ---------about-page------------ */
 #about-page {
-    width: 80%;
+    width: 100%;
     height: max-content;
     display: flex;
     flex-direction: column;
