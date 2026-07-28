@@ -15,7 +15,7 @@ ul {
 }
 
 :root {
-    --font-color: #ffff;
+    --font-color: #E2E8F0;
     --special-color: cadetblue;
     --special-color-2: #1F2937;
 }
@@ -98,10 +98,89 @@ nav {
     align-items: center;
     justify-content: space-evenly;
 }
+.header-center-items>li{
+    width: max-content;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* overflow: hidden; */
+    
+}
+/* .header-center-items>li:hover .header-center-items>li::after{
+    transform: translateX(60px);
+} */
+/* .header-center-items>li::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    left: -60px;
+    transform: translateX(0px);
+    top: 50px;
+    width: 60px;
+    height: 1px;
+    opacity: 1;
+    background-color: var(--special-color);
+} */
 .header-center-items>li>a {
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--font-color);
+}
+.header-center-items>li>a>i{
+    font-size: .9rem;
+}
+.header-center-items>li:nth-of-type(6){
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header-center-items>li:nth-of-type(6):hover .language{
+    display: flex;
+}
+.language{
+    position: absolute;
+    border: none;
+    right: auto;
+    top: 70px;
+    border-radius: 5px;
+    width: 140px;
+    height: 80px;
+    gap: 4px;
+    padding: 6px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--special-color);
+    z-index: 11;
+}
+.language>li{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    background-color: var(--special-color);
+}
+.language>li:hover{
+    background-color: rgb(79, 130, 132);
+    transform: scale(1.04 , 1.04);
+}
+.language>li:nth-of-type(2){
+    background-color: var(--special-color-2);
+}
+
+.language>li>a{
+    color: var(--font-color);
+    font-size: .9rem;
+    font-family: vazir;
 }
 
 
