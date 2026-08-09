@@ -241,30 +241,29 @@ main {
     display: flex;
     flex-direction: column;
     width: 50%;
+    line-height: 40px;
     margin-bottom: 10px;
 }
 
 /* text descripttion */
 .text-description-home {
     width: 80%;
+    line-height: 30px;
 }
 
 .text-description-home>* {
     color: var(--font-color);
 }
-
-.text-description-home>h1 {
-    font-size: 2.375rem;
-    color: var(--special-color);
+.text-description-home>h1{
+    font-size: 1.4rem;
 }
-
-.text-description-home>h3>span {
+.text-description-home>h3 {
+    font-size: 2.375rem;
+    line-height: 50px;
     color: var(--special-color);
-    font-size: 1.4375rem;
 }
 
 .text-description-home>p {
-    line-height: 25px;
     font-weight: 500;
 }
 
@@ -274,6 +273,7 @@ main {
     align-items: center;
     justify-content: left;
     gap: 15px;
+    margin-top: 10px;
 }
 
 .links-description-home>a>i {
