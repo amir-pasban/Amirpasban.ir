@@ -33,7 +33,7 @@ ul {
 :root {
     --font-color: #E2E8F0;
     --font-color-2: #AEB4BC;
-    --special-color: cadetblue;
+    --special-color: #5f9ea0;
     --special-color-2: #1F2937;
 }
 
@@ -106,10 +106,16 @@ nav {
     align-items: center;
     justify-content: left;
 }
-.header-left-items>p{
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--special-color);
+.header-left-items>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-left-items>a>img{
+    width: 90px;
+    height: 73px;
 }
 
 /* header center items */
@@ -588,3 +594,52 @@ main {
 
 
 /* project page */
+#project-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* filter projects */
+.container-filter-project{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-project{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.filter-project>li{
+    width: max-content;
+    height: 30px;
+    background-color: var(--special-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.filter-project>li>a{
+    font-size: 1.2rem;
+    color: var(--font-color-2);
+}
+
+
+
+
+
+
+
+
