@@ -31,6 +31,7 @@ ul {
 }
 /*-------------------------------*/
 :root {
+    --background: #0F1115;
     --font-color: #E2E8F0;
     --font-color-2: #AEB4BC;
     --special-color: #5f9ea0;
@@ -40,14 +41,8 @@ ul {
 /* wallpaper */
 body {
     min-height: 100dvh;
-    background-image: url('../../assets/photo/wallpaper-2.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    backdrop-filter: blur(3px);
+    background-color: var(--background);
     font-family: 'Nunito', sans-serif;
-    z-index: -11;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,8 +57,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgba(16, 21, 21, 0.95);
-    z-index: -10;
 }
 
 /*----------header----------*/
@@ -376,6 +369,8 @@ main {
     border-radius: 50%;
     border: 5px solid var(--special-color-2);
     z-index: -1;
+    filter: blur(120px);
+    opacity: .5;
 
 }
 .image-me-home>a{
