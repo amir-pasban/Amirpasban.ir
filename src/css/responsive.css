@@ -1,0 +1,27 @@
+/* start responsive */
+
+/* larg devices */
+@media screen and (max-width : 1140px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    .header-left-items>a>img {
+        width: 70px;
+        height: 53px;
+    }
+}
+
+@media screen and (max-width : 1070px) {
+
+    .text-description-home>h3 {
+        font-size: 2rem;
+    }
+
+
+}
+
+@media screen and (max-width: 1000px) {
+    
+}

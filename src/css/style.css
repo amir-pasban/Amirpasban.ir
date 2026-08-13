@@ -147,6 +147,7 @@ nav {
     color: var(--font-color);
     border: none;
     border-radius: 4px;
+    padding: 5px;
     background-color: var(--special-color);
 }
 .header-right-items>ul>li>a {
@@ -340,6 +341,7 @@ main {
     padding-left: 20px;
 }
 .stats-item-down>p{
+    font-size: .9rem;
     color: var(--font-color);
 }
 
@@ -422,14 +424,14 @@ main {
 
 /* image about */
 .image-about{
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .image-about>a{
-    width: 85%;
+    width: 90%;
     height: 100%;
 }
 .image-about>a>img{
@@ -439,7 +441,7 @@ main {
 
 /* about me text */
 .about-me-text{
-    width: 50%;
+    width: 60%;
     padding-top: 66px;
     height: 100%;
     flex-direction: column;
