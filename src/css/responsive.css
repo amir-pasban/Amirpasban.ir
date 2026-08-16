@@ -25,7 +25,35 @@
 
 /* 📲 Tablet */
 @media screen and (max-width: 1023px) {
-    
+    #home-page{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 40px;
+    }
+    .description-home{
+        align-items: center;
+        width: 100%;
+    }
+    .text-description-home{
+        align-items: center;
+    }
+    .stats{
+        width: 65%;
+    }
+    .stats-item-top{
+        justify-content: center;
+    }
+    .stats-item-down{
+        justify-content: center;
+    }
+    .image-me-home{
+        width: 100%;
+        margin-top: 0;
+    }
+    .image-me-home>a>img{
+        width: 65%;
+        height: 65%;
+    }
 
 }
 

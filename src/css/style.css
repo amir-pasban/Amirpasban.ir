@@ -246,6 +246,10 @@ main {
 
 /* text descripttion */
 .text-description-home {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
     width: 80%;
     line-height: 30px;
 }
@@ -277,7 +281,7 @@ main {
 
 .links-description-home>a>i {
     font-size: 1.7rem;
-    color: var(--special-color);
+    color: var(--font-color-2);
 }
 
 /* stats */
@@ -381,7 +385,6 @@ main {
 .image-me-home>a>img {
     width: 80%;
     height: 80%;
-    margin-right: 8px;
 }
 
 /* ---------about-page------------ */
