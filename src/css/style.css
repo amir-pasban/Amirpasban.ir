@@ -301,11 +301,12 @@ main {
     flex-direction: column;
     gap: 9px;
     position: relative;
+    padding-left: 20px;
 }
 .stats-item:nth-of-type(1):after{
     content: "";
     background-color: gray;
-    width: 1.3px;
+    width: 1px;
     height:55px;
     position: absolute;
     right: 0;
@@ -325,7 +326,6 @@ main {
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-left: 20px;
 }
 .stats-item-top>p{
     color: var(--special-color);
@@ -338,7 +338,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: left;
-    padding-left: 20px;
 }
 .stats-item-down>p{
     font-size: .9rem;
@@ -388,7 +387,7 @@ main {
 /* ---------about-page------------ */
 #about-page {
     width: 100%;
-    height: max-content;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -406,9 +405,8 @@ main {
 }
 .down-about-page{
     width: 100%;
-    height: max-content;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -427,7 +425,7 @@ main {
     width: 40%;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 .image-about>a{
@@ -469,7 +467,7 @@ main {
     gap: 40px;
 }
 
-.skills-me{
+.my-skill{
     width: max-content;
     height: 100%;
     display: flex;
@@ -493,19 +491,19 @@ main {
     color: var(--font-color);
     font-size: 1.7rem;
 }
-.skills-me:nth-of-type(1)>.top-skill>i{
+.my-skill:nth-of-type(1)>.top-skill>i{
     color: #E34F26;
 }
-.skills-me:nth-of-type(2)>.top-skill>i{
+.my-skill:nth-of-type(2)>.top-skill>i{
     color: #1572B6;
 }
-.skills-me:nth-of-type(3)>.top-skill>i{
+.my-skill:nth-of-type(3)>.top-skill>i{
     color: #F7DF1E;
 }
-.skills-me:nth-of-type(4)>.top-skill>i{
+.my-skill:nth-of-type(4)>.top-skill>i{
     color: #F05032;
 }
-.skills-me:nth-of-type(5)>.top-skill>i{
+.my-skill:nth-of-type(5)>.top-skill>i{
     color: #FFFFFF;
 }
 
@@ -541,8 +539,7 @@ main {
     padding: 10px;
     gap: 36px;
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(240px , 1fr));
-    grid-template-rows: repeat(2 , minmax(240px , 1fr));
+    grid-template-columns: repeat(auto-fit , minmax(240px , 1fr));
 }
 
 .services-box-item{
