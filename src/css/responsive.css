@@ -54,9 +54,36 @@
         width: 65%;
         height: 65%;
     }
-    
+
 
 }
+@media screen and (max-width : 900px) {
+    
+    .description-about-page{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .image-about{
+        display: none;
+    }
+    .about-me-text{
+        width: 78%;
+    }
+    .container-skills{
+        width: 78%;
+    }
+    #about-page{
+        gap: 0;
+    }
+
+
+
+}
+
+
+
 
 /* 📱 Mobile */
 @media screen and (max-width: 767px) {
