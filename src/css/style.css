@@ -67,8 +67,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--special-color-2);
+    background-color: transparent;
     z-index: 10;
+    position: relative;
+    border-bottom: .1px solid rgba(128, 128, 128, 0.141);
 }
 
 /* navbar */
@@ -94,7 +96,7 @@ nav {
 /* header items */
 /* header left items */
 .header-left-items{
-    width: 15%;
+    width: max-content;
     height: 100%;
     display: flex;
     align-items: center;
@@ -114,11 +116,12 @@ nav {
 
 /* header center items */
 .header-center-items{
-    width: 60%;
+    width: max-content;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 50px;
 }
 .header-center-items>li{
     width: max-content;
@@ -134,9 +137,48 @@ nav {
     font-weight: 500;
     color: var(--font-color);
 }
+
+/* header center items 2 */
+.header-center-items-2{
+    width: max-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+.header-center-items-2>li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-center-items-2>li>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-center-items-2>li>a>i{
+    font-size: 1.5rem;
+    color: var(--special-color);
+
+}
+.menu-site{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    display: none;
+    top: 71px;
+    left: 0;
+    background-color: #1572B6;
+}
+
 /* header right items */
 .header-right-items{
-    width: 15%;
+    width: max-content;
     height: 100%;
     display: flex;
     align-items: center;
@@ -159,7 +201,7 @@ nav {
 .header-right-items>ul>li>a {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--font-color);
+    color: var(--special-color-2);
     text-align: center;
 }
 
