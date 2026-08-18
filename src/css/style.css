@@ -25,11 +25,6 @@ ul {
 .title>h2{
     color: var(--special-color);
 }
-.title>p{
-    
-    font-size: 1rem;
-    color: var(--font-color);
-}
 /*-------------------------------*/
 :root {
     --background: #0F1115;
@@ -96,11 +91,10 @@ nav {
 /* header items */
 /* header left items */
 .header-left-items{
-    width: max-content;
+    width: calc(100% / 3);
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: left;
 }
 .header-left-items>a{
     width: 100%;
@@ -116,12 +110,12 @@ nav {
 
 /* header center items */
 .header-center-items{
-    width: max-content;
+    width: calc(100% / 3);
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 50px;
+    justify-content: space-between;
+    background-color: #E34F26;
 }
 .header-center-items>li{
     width: max-content;
@@ -140,11 +134,11 @@ nav {
 
 /* header center items 2 */
 .header-center-items-2{
-    width: max-content;
+    width: calc(100% / 3);
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: left;
     gap: 50px;
 }
 .header-center-items-2>li{
@@ -159,7 +153,7 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 .header-center-items-2>li>a>i{
     font-size: 1.5rem;
@@ -168,17 +162,26 @@ nav {
 }
 .menu-site{
     position: absolute;
+    visibility: hidden;
+    opacity: 0;
     width: 100%;
     height: 200px;
-    display: none;
+    display: flex;
+    flex-direction: column;
     top: 71px;
     left: 0;
-    background-color: #1572B6;
+    background-color: rgba(15, 17, 21, 0.998);
+    transition: all .5s ease-in-out;
+}
+
+.header-center-items-2>li:hover .menu-site{
+    visibility: visible;
+    opacity: 1;
 }
 
 /* header right items */
 .header-right-items{
-    width: max-content;
+    width: calc(100% / 3);
     height: 100%;
     display: flex;
     align-items: center;
@@ -189,14 +192,22 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 65%;
+    width: 50%;
     height: 35px;
     font-size: .9rem;
     color: var(--font-color);
     border: none;
     border-radius: 4px;
-    padding: 5px;
     background-color: var(--special-color);
+}
+.header-right-items>ul>li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 0 5px 0 5px;
 }
 .header-right-items>ul>li>a {
     font-size: 1rem;
@@ -205,8 +216,14 @@ nav {
     text-align: center;
 }
 
-.header-right-items>ul>li>a>i{
+.header-right-items>ul>li>i:nth-of-type(2){
     font-size: .9rem;
+    margin-top: 4px;
+    
+}
+.header-right-items>ul>li>i:nth-of-type(1){
+    font-size: 1.1rem;
+    color: var(--special-color-2);
 }
 .header-right-items>ul>li{
     width: 100%;
@@ -226,7 +243,7 @@ nav {
     right: auto;
     top: 36px;
     width: 100%;
-    height: 80px;
+    height: 45px;
     gap: 4px;
     padding: 6px;
     display: none;
@@ -244,14 +261,13 @@ nav {
     align-items: center;
     justify-content: center;
     transition: all .3s ease-in-out;
-    background-color: var(--special-color);
+    background-color: var(--special-color-2);
+    border: 1px solid var(--background);
+    border-radius: 12px;
 }
 .language>li:hover{
-    background-color: rgb(79, 130, 132);
+    background-color: var(--special-color);
     transform: scale(1.04 , 1.04);
-}
-.language>li:nth-of-type(2){
-    background-color: var(--special-color-2);
 }
 
 .language>li>a{
@@ -422,12 +438,8 @@ main {
     opacity: .5;
 
 }
-.image-me-home>a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.image-me-home>a>img {
+
+.image-me-home>img {
     width: 80%;
     height: 80%;
 }
@@ -472,7 +484,7 @@ main {
 .image-about{
     height: 100%;
     display: flex;
-    grid-column: 1.5 span;
+    grid-column: 1 span;
     align-items: center;
     justify-content: center;
 }
@@ -490,7 +502,7 @@ main {
 .about-me-text{
     padding-top: 66px;
     height: 100%;
-    grid-column: .5 span;
+    grid-column: 1 span;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -499,71 +511,17 @@ main {
 .about-me-text>p{
     width: 100%;
     font-size: .95rem;
-    text-align: justify;
     color: var(--font-color-2);
     line-height: 28px;
 }
 
 /* skills me */
 .container-skills{
+
     height: 100%;
-    grid-column: 2 span;
-    display: grid;
-    grid-template-columns: repeat( auto-fit , minmax(70px , 1fr));
+  
 }
 
-.my-skill{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
-/* top skill */
-.top-skill{
-    width: max-content;
-    height: max-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--special-color-2);
-    padding: 17px;
-    border-radius: 100%;
-}
-.top-skill>i{
-    color: var(--font-color);
-    font-size: 1.6rem;
-}
-.my-skill:nth-of-type(1)>.top-skill>i{
-    color: #E34F26;
-}
-.my-skill:nth-of-type(2)>.top-skill>i{
-    color: #1572B6;
-}
-.my-skill:nth-of-type(3)>.top-skill>i{
-    color: #F7DF1E;
-}
-.my-skill:nth-of-type(4)>.top-skill>i{
-    color: #F05032;
-}
-.my-skill:nth-of-type(5)>.top-skill>i{
-    color: #FFFFFF;
-}
-
-/* down skill */
-.down-skill{
-    width: 100%;
-    height: max-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.down-skill>p{
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--font-color-2);
-}
 
 /* --------services-page----------- */
 #services-page{
@@ -583,7 +541,8 @@ main {
     padding: 10px;
     gap: 36px;
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(200px , .5fr));
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+    grid-template-rows: repeat(auto-fit , 1fr);
     justify-content: center;
 
 }
@@ -679,7 +638,7 @@ main {
     width: 100%;
     height: max-content;
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(200px , .5fr));
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
     justify-content: center;
     gap: 40px;
     margin-top: 30px;

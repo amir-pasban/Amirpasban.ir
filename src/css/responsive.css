@@ -57,7 +57,7 @@
         margin-top: 0;
     }
 
-    .image-me-home>a>img {
+    .image-me-home>img {
         width: 65%;
         height: 65%;
     }
@@ -94,16 +94,27 @@
     .header-left-items {
         order: 1;
     }
+
     .header-center-items {
         order: 0;
         flex-direction: column;
     }
+
     .header-right-items {
         order: 2;
     }
 
-    .header-center-items{
+    .header-left-items>a>img {
+        width: 100px;
+        height: 80px;
+    }
+
+    .header-center-items {
         display: none;
+    }
+
+    .header-center-items-2 {
+        display: flex;
     }
 
 
