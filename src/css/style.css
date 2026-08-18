@@ -101,7 +101,7 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 .header-left-items>a>img{
     width: 90px;
@@ -115,7 +115,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #E34F26;
 }
 .header-center-items>li{
     width: max-content;
@@ -192,7 +191,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 35%;
     height: 35px;
     font-size: .9rem;
     color: var(--font-color);
@@ -699,7 +698,7 @@ main {
 
 
 .contact-box{
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat( 2 , minmax(80px , 1fr));
