@@ -95,6 +95,10 @@
         order: 1;
     }
 
+    .header-left-items>a {
+        justify-content: center;
+    }
+
     .header-center-items {
         order: 0;
         flex-direction: column;
