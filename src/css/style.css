@@ -503,7 +503,7 @@ main {
 /* about me text */
 .about-me {
     padding-top: 100px;
-    width: 100%;
+    width: 85%;
     height: max-content;
     grid-column: 1 span;
     display: flex;
@@ -531,8 +531,8 @@ main {
     grid-column: 2 span;
     display: flex;
     align-items: center;
-    justify-content: right;
     flex-direction: column;
+    justify-content: right;
     justify-self: center;
     gap: 25px;
     padding: 20px;
@@ -554,6 +554,7 @@ main {
     height: max-content;
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: space-between;
 }
 
@@ -965,7 +966,8 @@ main {
 }
 
 .submit-button>button>i {
-    color: var(--font-color-2);
+    color: var(--font-color);
     font-size: .9rem;
     margin-left: 5px;
+    text-align: center;
 }
