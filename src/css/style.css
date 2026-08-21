@@ -136,7 +136,8 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
 }
 
 .header-center-items>li {
@@ -218,7 +219,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    min-width: 110px;
     height: 38px;
     color: var(--font-color);
     border: none;   
@@ -250,7 +251,6 @@ nav {
 }
 
 .header-right-items>ul>li>button:hover {
-    background-color: ;
     transition: .3s all ease-in-out;
     transform: scale(1.02);
 }
@@ -473,7 +473,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    row-gap: 50px;
+    row-gap: 30px;
 }
 
 /* image about */
@@ -495,13 +495,14 @@ main {
 }
 
 .image-about>a>img {
-    width: 60%;
-    height: 100%;
+    width: 330px;
+    height: 330px;
+
 }
 
 /* about me text */
 .about-me {
-    padding-top: 42px;
+    padding-top: 100px;
     width: 100%;
     height: max-content;
     grid-column: 1 span;
