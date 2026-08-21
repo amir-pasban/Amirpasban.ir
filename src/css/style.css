@@ -223,7 +223,7 @@ nav {
     height: 38px;
     color: var(--font-color);
     border: none;   
-    border: 1px solid #0f111572;
+    border: 2px solid #0f111550;
     border-radius: 33px;
     background-color: #1F2937;
 }

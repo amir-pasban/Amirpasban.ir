@@ -78,12 +78,12 @@
         display: none;
     }
 
-    .about-me-text {
-        width: 78%;
+    .about-me {
+        width: 75%;
     }
 
     .container-skills {
-        width: 78%;
+        width: 100%;
     }
 
     #about-page {
@@ -122,10 +122,34 @@
     }
 
 
+
 }
 
 
 
 
 /* 📱 Mobile */
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 700px) {
+
+    .about-me{
+        width: 96%;
+    }
+    .about-me>p{
+        text-align: justify;
+    }
+}
+@media screen and (max-width : 600px) {
+    .stats{
+        width: 90%;
+    }
+    .contact-box{
+        width: 100%;
+    }
+    .skills{
+        justify-content: center;
+        gap: 70px;
+    }
+    .percent-skill{
+        width: 50%;
+    }
+}
