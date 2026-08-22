@@ -207,6 +207,12 @@
         justify-content: center;
         width: 100%;
     }
+    .skill-icon>p{
+        font-size: 1.1rem;
+    }
+    .skill-icon>i{
+        font-size: 1.5rem;
+    }
     .percent-skill{
         order: 1;
         width: 80%;
