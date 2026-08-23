@@ -25,16 +25,20 @@ ul {
 }
 
 .title>h2 {
-    color: var(--special-color);
+    color: var(--font-color);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(31, 41, 55, 0.35);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 17px;
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
 }
 
 html {
@@ -53,8 +57,17 @@ html {
 /* wallpaper */
 body {
     min-height: 100dvh;
-    background-color: var(--background);
+    background:
+        radial-gradient(circle at 15% 20%,
+            rgba(95, 158, 160, 0.08),
+            transparent 35%),
+        radial-gradient(circle at 85% 80%,
+            rgba(95, 158, 160, 0.05),
+            transparent 35%),
+        var(--background);
     font-family: 'Nunito', sans-serif;
+    color: var(--font-color);
+    line-height: 1.6;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,7 +176,8 @@ nav {
         color 0.3s ease,
         transform 0.3s ease;
 }
-.header-center-items>li>a:hover{
+
+.header-center-items>li>a:hover {
     color: var(--special-color);
 }
 
@@ -266,49 +280,37 @@ nav {
     justify-content: right;
 }
 
-.header-right-items>ul {
+.language-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-width: 110px;
-    height: 38px;
-    color: var(--font-color);
-    border: none;
-    border: 2px solid #0f111550;
-    border-radius: 33px;
-    background-color: #1F2937;
-}
-
-.header-right-items>ul>li {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-    padding: 3px;
-
-}
-
-.header-right-items>ul>li>button {
-    width: 50%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.025);
+    gap: 7px;
+    padding: 6px 9px;
+    background: rgba(95, 158, 160, 0.08);
+    border: 1px solid rgba(95, 158, 160, 0.2);
+    border-radius: 8px;
     color: var(--font-color-2);
-    border-radius: 33px;
-    font-size: .9rem;
-    border: none;
     cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease;
 }
 
-.header-right-items>ul>li>button:hover {
-    transition: .3s all ease-in-out;
-    transform: scale(1.02);
+.language {
+    transition: color 0.25s ease;
 }
 
-.header-right-items>ul>li>button:nth-of-type(1) {
-    background-color: cadetblue;
-    color: var(--font-color);
+.language.active {
+    color: var(--special-color);
+}
+
+.language-btn>i {
+    color: var(--font-color-2);
+    font-size: 0.9rem;
+}
+
+.language-btn:hover {
+    background: rgba(95, 158, 160, 0.14);
+    border-color: rgba(95, 158, 160, 0.4);
 }
 
 
@@ -404,9 +406,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--special-color-2);
     margin-top: 20px;
-    border: none;
     border-radius: 8px;
 }
 
@@ -502,7 +502,7 @@ main {
     height: 100%;
     border-radius: 50%;
     border: 5px solid var(--special-color-2);
-    z-index: -1;
+    z-index: -100;
     filter: blur(120px);
     opacity: .5;
     animation: glowMove 5s ease-in-out infinite;
@@ -750,31 +750,31 @@ main {
 .container-skills>.skills>.percent-skill::after {
     content: "";
     position: absolute;
-    width: var(--target);
+    width: var(--current-width, 0%);
     height: 100%;
     background-color: var(--special-color);
     border-radius: 20px;
-    transition: width 1.2s ease;
+    transition: width 3s ease-in-out;
 }
 
-.container-skills>:nth-child(2)>.percent-skill::after {
-    --target:90%;
+.container-skills>:nth-child(2)>.percent-skill {
+    --target: 90%;
 }
 
-.container-skills>:nth-child(3)>.percent-skill::after {
-    --target:80%;
+.container-skills>:nth-child(3)>.percent-skill {
+    --target: 80%;
 }
 
-.container-skills>:nth-child(4)>.percent-skill::after {
-    --target:10%;
+.container-skills>:nth-child(4)>.percent-skill {
+    --target: 10%;
 }
 
-.container-skills>:nth-child(5)>.percent-skill::after {
-    --target:100%;
+.container-skills>:nth-child(5)>.percent-skill {
+    --target: 100%;
 }
 
-.container-skills>:nth-child(6)>.percent-skill::after {
-    --target:90%;
+.container-skills>:nth-child(6)>.percent-skill {
+    --target: 90%;
 }
 
 
@@ -803,7 +803,6 @@ main {
 }
 
 .services-box-item {
-    background-color: var(--special-color-2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -915,6 +914,14 @@ main {
     align-items: center;
     background-color: transparent;
     gap: 10px;
+    position: relative;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.item-project:hover {
+    transform: translateY(-8px);
 }
 
 .top-item-project {
@@ -927,6 +934,24 @@ main {
 .top-item-project>img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.item-project:hover .top-item-project img {
+    transform: scale(1.05);
+}
+
+.top-item-project::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.item-project:hover .top-item-project::after {
+    opacity: 1;
 }
 
 /* down-item-project */
@@ -977,18 +1002,25 @@ main {
 
 .contact-inputs {
     width: 100%;
-    height: 100%;
-    background-color: var(--special-color-2);
-    border: none;
+    background: rgba(31, 41, 55, 0.35);
+    border: 1px solid rgba(95, 158, 160, 0.12);
+    border-radius: 8px;
+    color: var(--font-color);
+    padding: 12px 14px;
     outline: none;
-    cursor: pointer;
-    padding-inline-start: 10px;
-    color: var(--special-color);
-    border-radius: 4px;
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease;
 }
 
 .contact-inputs::placeholder {
     color: var(--font-color-2);
+    opacity: 0.7;
+}
+.contact-inputs:focus {
+    border-color: rgba(95, 158, 160, 0.5);
+
+    background: rgba(31, 41, 55, 0.5);
 }
 
 /* full name box */
@@ -997,7 +1029,6 @@ main {
     height: 40px;
     grid-column: 1 span;
     border-radius: 4px;
-    overflow: hidden;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -1009,7 +1040,6 @@ main {
     height: 40px;
     grid-column: 1 span;
     border-radius: 4px;
-    overflow: hidden;
 }
 
 
@@ -1019,25 +1049,30 @@ main {
     min-height: 80px;
     grid-column: 2 span;
     border-radius: 4px;
-    overflow: hidden;
     resize: vertical;
 }
 
 .textarea {
     width: 100%;
-    height: 100%;
-    background-color: var(--special-color-2);
-    border: none;
+    background: rgba(31, 41, 55, 0.35);
+    border: 1px solid rgba(95, 158, 160, 0.12);
+    border-radius: 8px;
+    color: var(--font-color);
+    padding: 12px 14px;
     outline: none;
-    border-radius: 4px;
-    padding-inline-start: 10px;
-    padding-top: 5px;
-    color: var(--special-color);
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease;
 }
 
 .textarea::placeholder {
     color: var(--font-color-2);
-    font-family: 'Nunito', sans-serif;
+    opacity: 0.7;
+}
+.textarea:focus {
+    border-color: rgba(95, 158, 160, 0.5);
+
+    background: rgba(31, 41, 55, 0.5);
 }
 
 /* submit button */
@@ -1045,15 +1080,36 @@ main {
     min-width: 200px;
     height: 40px;
     border-radius: 7px;
-    overflow: hidden;
 }
 
 .submit-button>button {
     width: 100%;
     height: 100%;
-    background-color: var(--special-color);
-    border: none;
+    padding: 10px 20px;
+
+    border: 1px solid rgba(95, 158, 160, 0.3);
+    border-radius: 8px;
+
+    background: rgba(95, 158, 160, 0.08);
     color: var(--font-color);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.submit-button>button:hover {
+    transform: translateY(-2px);
+
+    background: rgba(95, 158, 160, 0.16);
+    border-color: rgba(95, 158, 160, 0.5);
+}
+
+.submit-button>button:active {
+    transform: translateY(0);
 }
 
 .submit-button>button>i {
