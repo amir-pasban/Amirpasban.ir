@@ -1201,16 +1201,16 @@ footer{
 
 /* created by */
 .created{
-    width: 100%;
+    width: 40%;
     height: max-content;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top: 1px solid var(--special-color);
 }
 .created>p{
     padding-top: 30px;
-    width: 40%;
-    border-top: 1px solid var(--special-color);
+    width: 100%;
     font-size: .9rem;
     text-align: center;
     font-weight: 300;
