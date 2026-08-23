@@ -1148,3 +1148,71 @@ main {
     margin-left: 5px;
     text-align: center;
 }
+
+
+/* ------------------- */
+
+/* footer */
+footer{
+    width: 100%;
+    height: max-content;
+    padding: 20px 0;
+    background: #13171D;
+    border-top: 1px solid rgba(95, 158, 160, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* logo */
+.logo{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo>img{
+    width: 100px;
+    height: 93px;
+    margin-left: 15px;
+}
+
+/* phone number */
+.phone-number{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.phone-number>i{
+    color: var(--special-color);
+    font-size: 1.1rem;
+}
+.phone-number>a{
+    font-size: 1rem;
+    color: var(--font-color);
+    margin-right: 10px;
+}
+
+/* created by */
+.created{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.created>p{
+    padding-top: 30px;
+    width: 40%;
+    border-top: 1px solid var(--special-color);
+    font-size: .9rem;
+    text-align: center;
+    font-weight: 300;
+    color: var(--font-color-2);
+}
