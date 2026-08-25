@@ -183,7 +183,10 @@
     .header-right-items>ul{
         min-width: 90px;
     }
-
+    .menu-site{
+        left: -19px;
+        border-radius: 2px 2px 30px 0;
+    }
     
     .text-description-home{
         width: 100%;
