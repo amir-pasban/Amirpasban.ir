@@ -670,7 +670,8 @@ main {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
+    order: 0;
     gap: 10px;
 }
 
@@ -699,12 +700,15 @@ main {
     font-size: 1.5rem;
 }
 
-
+.skill-icon>i{
+    order: 1;
+}
 .skill-icon>p {
     font-size: 1rem;
     font-weight: 600;
     color: var(--font-color-2);
     cursor: default;
+    order: 0;
 }
 
 .percent-skill {
@@ -715,7 +719,8 @@ main {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: left;
+    order: 1;
 
 }
 
@@ -739,7 +744,7 @@ main {
     width: 45px;
     height: 30px;
     border-radius: 10px;
-    right: -40px;
+    left: -40px;
     z-index: 10;
     background-color: var(--special-color-2);
 

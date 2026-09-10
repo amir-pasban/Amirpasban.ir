@@ -219,8 +219,8 @@
     .percent-skill{
         order: 1;
         width: 80%;
-        justify-content: right;
-        margin-right: 40px;
+        justify-content: left;
+        margin-left: 40px;
     }
     .skills{
         flex-direction: column;
