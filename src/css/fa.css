@@ -27,6 +27,7 @@ ul {
 .title>h2 {
     color: var(--font-color);
     font-size: clamp(1.5rem, 2vw, 2rem);
+    font-family: font-light;
     font-weight: 700;
     line-height: 1.2;
     cursor: default;
@@ -66,7 +67,6 @@ body {
             rgba(95, 158, 160, 0.05),
             transparent 35%),
         var(--background);
-    font-family: 'Nunito', sans-serif;
     color: var(--font-color);
     line-height: 1.6;
     display: flex;
@@ -137,7 +137,7 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: right;
     cursor: default;
 }
 
@@ -168,11 +168,11 @@ nav {
 .header-center-items>li>a {
     height: 100%;
     width: max-content;
-    font-size: 1.1rem;
-    font-weight: 500;
     display: flex;
     align-items: center;
     color: var(--font-color);
+    font-family: font-light;
+    font-size: 1.1rem;
     position: relative;
     overflow: hidden;
     transition:
@@ -191,12 +191,12 @@ nav {
     height: 2px;
     background-color: var(--special-color);
     bottom: 16px;
-    left: -100%;
+    right: -100%;
     transition: all .5s ease-in-out;
 }
 
 .header-center-items>li>a:hover::after {
-    left: 0;
+    right: 0;
     background-color: var(--special-color);
 }
 
@@ -289,14 +289,14 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: left;
 }
 
 .language-btn {
     display: flex;
     align-items: center;
     gap: 7px;
-    padding: 6px 9px;
+    padding: 10px 10px;
     background: rgba(95, 158, 160, 0.08);
     border: 1px solid rgba(95, 158, 160, 0.2);
     border-radius: 8px;
@@ -390,12 +390,14 @@ main {
 
 .text-description-home>h1 {
     font-size: 1.4rem;
+    font-family: font-light;
     cursor: default;
 }
 
 .text-description-home>h3 {
     font-size: 2.375rem;
     line-height: 50px;
+    font-family: font-regular;
     color: var(--special-color);
     cursor: default;
 }
@@ -403,13 +405,14 @@ main {
 .text-description-home>p {
     font-weight: 500;
     cursor: default;
+    font-family: font-light;
 }
 
 /* link descripttion in home */
 .links-description-home {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: right;
     gap: 15px;
     margin-top: 10px;
 }
@@ -439,7 +442,7 @@ main {
     flex-direction: column;
     gap: 9px;
     position: relative;
-    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .stats-item:nth-of-type(1):after {
@@ -448,7 +451,7 @@ main {
     width: 1px;
     height: 55px;
     position: absolute;
-    right: 0;
+    left: 0;
 }
 
 .stats-item:nth-of-type(2):after {
@@ -457,7 +460,7 @@ main {
     width: 1px;
     height: 55px;
     position: absolute;
-    right: 0;
+    left: 0;
 }
 
 /* top stats item */
@@ -465,7 +468,7 @@ main {
     width: 100%;
     height: 30%;
     display: flex;
-    justify-content: left;
+    justify-content: right;
     align-items: center;
 }
 
@@ -473,6 +476,7 @@ main {
     color: var(--special-color);
     font-weight: 800;
     cursor: default;
+    font-family: font-light;
 }
 
 /* down stats item */
@@ -481,13 +485,14 @@ main {
     height: 30%;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: right;
 }
 
 .stats-item-down>p {
     font-size: .9rem;
     color: var(--font-color);
     cursor: default;
+    font-family: font-light;
 }
 
 /* image me */
@@ -628,12 +633,14 @@ main {
     font-size: 1rem;
     color: var(--font-color-2);
     line-height: 28px;
-    cursor: default
+    cursor: default;
+    font-family: font-light;
 }
 
 .about-me>p>span {
     color: var(--special-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-family: font-medium;
 }
 
 /* skills me */
@@ -651,10 +658,11 @@ main {
 }
 
 .container-skills>.title>h2 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     padding: 8px;
     color: var(--special-color);
+    font-family: font-medium;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -675,7 +683,7 @@ main {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: left;
     order: 0;
     gap: 10px;
 }
@@ -712,6 +720,7 @@ main {
     font-size: 1rem;
     font-weight: 600;
     color: var(--font-color-2);
+    font-family: Arial, Helvetica, sans-serif;
     cursor: default;
     order: 0;
 }
@@ -729,19 +738,12 @@ main {
 
 }
 
-.percent-skill>p {
-    font-size: .95rem;
-    font-weight: 300;
-    color: var(--font-color);
-    z-index: 10;
-    padding-right: 30px;
-}
-
 .percent-skill::before {
     content: "75%";
     font-size: .8rem;
     font-weight: 300;
     color: var(--font-color);
+    font-family: font-light;
     position: absolute;
     display: flex;
     align-items: center;
@@ -749,7 +751,7 @@ main {
     width: 45px;
     height: 30px;
     border-radius: 10px;
-    left: -40px;
+    right: -40px;
     z-index: 10;
     background-color: var(--special-color-2);
 
@@ -781,6 +783,7 @@ main {
     position: absolute;
     width: var(--current-width, 0%);
     height: 100%;
+    right: 0;
     background-color: var(--special-color);
     border-radius: 20px;
     transition: width 3s ease-in-out;
@@ -865,6 +868,7 @@ main {
 .s-b-item-top>h3 {
     color: var(--special-color);
     cursor: default;
+    font-family: font-medium;
 }
 
 .s-b-item-down {
@@ -880,6 +884,7 @@ main {
     font-size: 1rem;
     color: var(--font-color-2);
     cursor: default;
+    font-family: font-ultralight;
 }
 
 /* --------------project page------------------- */
@@ -935,6 +940,7 @@ main {
 .filter-project>li>a {
     font-size: .9rem;
     color: var(--font-color);
+    font-family: font-light;
 }
 
 /* projects */
@@ -1015,11 +1021,13 @@ main {
 .down-item-project>p:nth-of-type(1) {
     font-size: 1.2rem;
     color: var(--special-color);
+    font-family: font-light;
 }
 
 .down-item-project>p:nth-of-type(2) {
     font-size: .9rem;
     color: var(--font-color-2);
+    font-family: font-ultralight;
 }
 
 
@@ -1063,6 +1071,7 @@ main {
 .contact-inputs::placeholder {
     color: var(--font-color-2);
     opacity: 0.7;
+    font-family: font-medium;
 }
 .contact-inputs:focus {
     border-color: rgba(95, 158, 160, 0.5);
@@ -1117,6 +1126,7 @@ main {
 .textarea::placeholder {
     color: var(--font-color-2);
     opacity: 0.7;
+    font-family: font-medium;
 }
 .textarea:focus {
     border-color: rgba(95, 158, 160, 0.5);
@@ -1135,6 +1145,7 @@ main {
     width: 100%;
     height: 100%;
     padding: 10px 20px;
+    font-family: font-medium;
 
     border: 1px solid rgba(95, 158, 160, 0.3);
     border-radius: 8px;
@@ -1164,7 +1175,7 @@ main {
 .submit-button>button>i {
     color: var(--font-color);
     font-size: .9rem;
-    margin-left: 5px;
+    margin-right: 5px;
     text-align: center;
 }
 
@@ -1196,7 +1207,7 @@ footer{
 .logo>img{
     width: 100px;
     height: 93px;
-    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /* phone number */
@@ -1215,7 +1226,8 @@ footer{
 .phone-number>a{
     font-size: 1rem;
     color: var(--font-color);
-    margin-right: 10px;
+    margin-left: 10px;
+    font-family: font-medium;
 }
 
 /* created by */
@@ -1234,4 +1246,5 @@ footer{
     text-align: center;
     font-weight: 300;
     color: var(--font-color-2);
+    font-family: ultralight;
 }

@@ -628,7 +628,7 @@ main {
     font-size: 1rem;
     color: var(--font-color-2);
     line-height: 28px;
-    cursor: default
+    cursor: default;
 }
 
 .about-me>p>span {
