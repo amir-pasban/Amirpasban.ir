@@ -206,7 +206,7 @@ nav {
     height: 100%;
     display: none;
     align-items: center;
-    justify-content: left;
+    justify-content: right;
     gap: 50px;
 }
 
@@ -215,7 +215,7 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: right;
     position: relative;
 }
 
@@ -248,7 +248,7 @@ nav {
     -webkit-backdrop-filter: blur(16px);
     top: 69px;
     overflow: hidden;
-    left: -20px;
+    right: -20px;
     border: 1px solid rgba(95, 158, 160, .141);
     border-top: none;
     border-radius:  2px 2px 30px 30px;
@@ -280,6 +280,7 @@ nav {
     justify-content: center;
     color: var(--special-color);
     font-size: .9rem;
+    font-family: font-light;
     font-weight: 600;
 }
 
