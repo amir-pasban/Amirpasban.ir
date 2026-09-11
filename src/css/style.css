@@ -237,7 +237,7 @@ nav {
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    width: 70px;
+    width: 85px;
     height: 0dvh;
     display: flex;
     flex-direction: column;
